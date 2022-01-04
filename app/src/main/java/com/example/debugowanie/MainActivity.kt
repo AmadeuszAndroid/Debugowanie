@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun logging() {
-        Log.v(TAG, "Hello world!")
+        Log.e(TAG, "BŁĄD: poważny błąd jak awaria aplikacji")
+        Log.w(TAG, "OSTRZEŻENIE: o potencjalnych poważnych błędach")
+        Log.i(TAG, "INFORMACJA: raportowanie technicznej informacji, jak operacja zakończona powodzeniem")
+        Log.d(TAG, "DEBUGOWANIE: raportowanie informacji przydatnych do debugowania")
+        Log.v(TAG, "ROZWLEKŁY: bardziej szczegółowe, niż logi debugowania")
     }
 }

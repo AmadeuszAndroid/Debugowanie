@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d(TAG, "tutaj aplikacja wcześniej ulegała awarii")
-        val helloTextView: TextView = findViewById(R.id.hello_world)
+        val helloTextView: TextView = findViewById(R.id.division_textview)
         Log.d(TAG, "to powinno trafić do logu jeśli błąd jest naprawiony")
         helloTextView.text = "Witaj, debugowaniu!"
         logging()
@@ -23,8 +23,9 @@ class MainActivity : AppCompatActivity() {
         val numerator = 60
         var denominator = 4
         repeat(4) {
-            Log.d(TAG, "$denominator")
+            Thread.sleep(1)
             Log.v(TAG, "${numerator / denominator}")
+            findViewById<TextView>(R.id.division_textview).setText("${numerator / denominator}")
             denominator--
         }
     }
